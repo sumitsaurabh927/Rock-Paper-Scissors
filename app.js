@@ -8,8 +8,7 @@ const computerPlay = () => {
   return choicesArr[Math.floor(Math.random() * 3)];
 };
 
-
-// who wins?
+// who won function for each round
 const whoWon = (userPlay, computerSelection) => {
   // user's winning conditions
   if (
@@ -30,15 +29,18 @@ const whoWon = (userPlay, computerSelection) => {
   }
 };
 
-
 const playGame = () => {
   let userScore = 0;
   let compScore = 0;
+
+//   playing 5 times
   for (let i = 0; i < 5; i++) {
     let userChoice = prompt("Enter your choice").toLowerCase();
-    console.log('user choice is: ' ,userChoice );
+    console.log("user choice is: ", userChoice);
+
     let computerChoice = computerPlay();
-    console.log('compueter choice is: ' ,computerChoice );
+    console.log("compueter choice is: ", computerChoice);
+
     if (whoWon(userChoice, computerChoice) === "user") {
       userScore += 10;
     } else if (whoWon(userChoice, computerChoice) === "comp") {
@@ -46,6 +48,8 @@ const playGame = () => {
     }
     console.log("userScore = ", userScore, "pc score: ", compScore);
   }
+
+  //   comparing final scores
   if (userScore > compScore) {
     console.log("User Won!!!");
   } else if (compScore > userScore) {
