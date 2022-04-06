@@ -33,7 +33,7 @@ const playGame = () => {
   let userScore = 0;
   let compScore = 0;
 
-//   playing 5 times
+  //   playing 5 times
   for (let i = 0; i < 5; i++) {
     let userChoice = prompt("Enter your choice").toLowerCase();
     console.log("user choice is: ", userChoice);
