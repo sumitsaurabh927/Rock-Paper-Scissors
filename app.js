@@ -7,6 +7,7 @@ let scissorBtn = document.querySelector("#scissor");
 
 // variable to count number of rounds played
 let count = 0;
+
 // variables to track scores
 let userScore = 0;
 let compScore = 0;
@@ -40,57 +41,27 @@ const whoWon = (userPlay, computerSelection) => {
   }
 };
 
-// const playGame = (userChoice) => {
-//   let userScore = 0;
-//   let compScore = 0;
-
-//   // playing 5 times
-//   // for (let i = 0; i < 5; i++) {
-//   // let userChoice = prompt("Enter your choice").toLowerCase();
-//   console.log("user choice is: ", userChoice);
-
-//   let computerChoice = computerPlay();
-//   console.log("compueter choice is: ", computerChoice);
-
-//   if (whoWon(userChoice, computerChoice) === "user") {
-//     userScore += 10;
-//   } else if (whoWon(userChoice, computerChoice) === "comp") {
-//     compScore += 10;
-//   }
-//   console.log("userScore = ", userScore, "pc score: ", compScore);
-//   // }
-
-//   //   comparing final scores
-//   // if (userScore > compScore) {
-//   //   console.log("User Won!!!");
-//   // } else if (compScore > userScore) {
-//   //   console.log("Computer Won!!!");
-//   // } else {
-//   //   console.log("draw!!!");
-//   // }
-//   // }
-// };
-
-// playGame();
-
-// making game play on button click
-// let computerChoice = computerPlay();
-
 const playRound = (userChoice) => {
   console.log(`User's choice is: ${userChoice}`);
 
   // computer's selection function
   let choicesArr = ["rock", "paper", "scissors"];
-
-  // const computerPlay = () => {
-  //   console.log(choicesArr[Math.floor(Math.random() * 3)]);
-  //   return choicesArr[Math.floor(Math.random() * 3)];
-  // };
   let computerChoice = choicesArr[Math.floor(Math.random() * 3)];
   console.log(`Comp's choice is ${computerChoice}`);
 
   // round result
   whoWon(userChoice, computerChoice);
+
+  // comparing final scores
+  if (count === 5) {
+    if (userScore > compScore) {
+      console.log("User Won THE ENTIRE GAME!!!");
+    } else if (compScore > userScore) {
+      console.log("Computer Won THE ENTIRE GAME!!!");
+    } else {
+      console.log("THE ENTIRE GAME WAS draw!!!");
+    }
+  }
 };
 
 // making the game play on each button click
