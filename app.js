@@ -7,6 +7,9 @@ let scissorBtn = document.querySelector("#scissor");
 
 // variable to count number of rounds played
 let count = 0;
+// variables to track scores
+let userScore = 0;
+let compScore = 0;
 
 // who won function for each round
 const whoWon = (userPlay, computerSelection) => {
@@ -17,23 +20,22 @@ const whoWon = (userPlay, computerSelection) => {
     (userPlay === "scissors" && computerSelection === "paper")
   ) {
     console.log("User WINS!!!!");
-    console.log(`Prv value of count: ${count}`);
+    userScore += 10;
+    console.log(userScore, compScore);
     count++;
-    console.log(`Update value of count: ${count}`);
     return "user";
   } else if (userPlay === computerSelection) {
     //   draw conditions
     console.log("draw!");
-    console.log(`Prv value of count: ${count}`);
+    console.log(userScore, compScore);
     count++;
-    console.log(`Update value of count: ${count}`);
     return "draw inside";
   } else {
     //   computer wins in all other cases
     console.log("computer wins");
-    console.log(`Prv value of count: ${count}`);
     count++;
-    console.log(`Update value of count: ${count}`);
+    compScore += 10;
+    console.log(userScore, compScore);
     return "comp";
   }
 };
@@ -93,18 +95,17 @@ const playRound = (userChoice) => {
 
 // making the game play on each button click
 rockBtn.addEventListener("click", () => {
-  if(count<6){
+  if (count < 5) {
     playRound("rock");
-  }else console.log('max played')
+  } else console.log("max played");
 });
 paperBtn.addEventListener("click", () => {
-  if(count<6){
+  if (count < 5) {
     playRound("paper");
-  }else console.log('max played')
+  } else console.log("max played");
 });
 scissorBtn.addEventListener("click", () => {
-
-  if(count<6){
+  if (count < 5) {
     playRound("scissors");
-  }else console.log('max played')
+  } else console.log("max played");
 });
