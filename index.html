@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Rock Paper Scissors</title>
-</head>
-<body>
-    <div class="selection">
-        <button id="rock">Rock</button>
-        <button id="paper"> Paper </button>
-        <button id="scissor"> Scissor</button>
+  </head>
+  <body>
+    <h1>Rock Paper Scissor</h1>
+    <!--general game information -->
+    <section class="info">
+      <div class="infoOne">Pick your pick</div>
+      <div class="infoTwo">There will be five game rounds</div>
+    </section>
+
+    <!-- information of each round -->
+    <section class="scores">
+      <!-- user's information -->
+      <div class="userInfo">
+        <div class="userChoice">&#10068;</div>
+        <div class="userScore">Player: 0</div>
+      </div>
+      <!-- computer's information -->
+      <div class="computerInfo"> 
+        <div class="computerChoice">&#10068;</div>
+        <div class="computerScore">Computer: 0</div>
+      </div>
+    </section>
+    <div class="selectionContainer">
+      <button id="rock">
+        <!-- <img src="./images/rock.png" /> -->
+        &#9994;
+      </button>
+      <button id="paper">
+        <!-- <img src="./images/paper.png" /> -->
+        &#9995;
+      </button>
+      <button id="scissor">
+        <!-- <img src="./images/scissor.png" /> -->
+        &#9996;
+      </button>
     </div>
 
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
