@@ -1,3 +1,102 @@
-body{
-    background-color: black;
+/* fonts cdn */
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fca311;
+  font-family: "Kanit", sans-serif;
+  background: #14213d;
+}
+
+h1 {
+  /* min-height: 10%; */
+  padding: 2.5rem 0;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  background: #1b1b1b;
+}
+
+.bodyFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.info {
+  margin: 1rem 0;
+}
+
+.infoRound,
+.infoStatus {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.scores {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.userInfo,
+.computerInfo {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 4rem 0.5rem;
+
+  width: 13rem;
+  height: 13rem;
+  text-align: center;
+}
+
+.winner {
+  background: #301f00;
+  border: 1px solid #544d1f;
+}
+
+.userChoice {
+  margin: 1rem 0;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.computerChoice {
+  margin: 1rem 0;
+
+  font-size: 5rem;
+  text-align: center;
+}
+
+/* font size */
+.userScore,
+.computerScore {
+  font-size: 1.5rem;
+}
+
+button {
+  height: 8rem;
+  width: 8rem;
+  font-size: 5rem;
+  margin: 1rem 0.5rem;
+  text-align: center;
+  background: #151921;
+  border-radius: 10px;
+  border: none;
+}
+button:hover {
+  background: #1f335d;
+}
+
+/* positioning */
+
+.selectionContainer {
+  position: relative;
+  bottom: -50px;
 }
