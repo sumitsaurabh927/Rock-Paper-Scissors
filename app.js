@@ -122,3 +122,7 @@ scissorBtn.addEventListener("click", () => {
     playRound("scissors");
   } else console.log("max played");
 });
+
+
+// to do
+// 1. add a play again modal (reset scores to 0; replay ability w/o reload)
