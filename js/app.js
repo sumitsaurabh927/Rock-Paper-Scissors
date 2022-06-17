@@ -65,6 +65,15 @@ const whoWon = (userPlay, computerSelection) => {
   }
 };
 
+let computerChoice = getComputerChoice();
+
+async function getComputerChoice() {
+  // fetching data from our api in server.js
+   const compChoice = await fetch('/rps/play')
+   const res = await compChoice.json()
+   computerChoice=res.choice;
+}
+
 const playRound = (userChoice) => {
   // updating user choice on page
   if (userChoice === "rock") {
@@ -120,16 +129,19 @@ const playRound = (userChoice) => {
 // making the game play on each button click
 rockBtn.addEventListener("click", () => {
   if (count < 5) {
+    getComputerChoice();
     playRound("rock");
   } else console.log("max played");
 });
 paperBtn.addEventListener("click", () => {
   if (count < 5) {
+    getComputerChoice();
     playRound("paper");
   } else console.log("max played");
 });
 scissorBtn.addEventListener("click", () => {
   if (count < 5) {
+    getComputerChoice();
     playRound("scissors");
   } else console.log("max played");
 });
